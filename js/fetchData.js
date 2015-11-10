@@ -1,7 +1,7 @@
-﻿var excelData = [];
+﻿
 
 function fetchData() {
-
+var excelData = [];
     $.post("http://192.168.254.64:2056/ExternalWarehouseAppHandler.ashx/opendocument?dt=" + (new Date().getTime()), function (json) {
         console.log("worked");
         excelData = ParseServerJSONString(json).Data;
