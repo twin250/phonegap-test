@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Battery API</title>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+window.addEventListener("deviceready",init,false);
+function init()
+{
+window.addEventListener("batterycritical",bCritical,false);
+window.addEventListener("batterylow",bLow,false);
+}
+function bCritical(info)
+{
+alert("Your Battery @ critical Status"+info.level);
+}
+function bLow(info)
+{
+alert("Battery @ low"+info.level);
+}
+function checkbattery()
+{
+window.addEventListener("batterystatus", onBatteryStatus, false);
+}
+function onBatteryStatus(info) {
+alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
+}
+
+function checkConnection() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN] = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI] = 'WiFi connection';
+    states[Connection.CELL_2G] = 'Cell 2G connection';
+    states[Connection.CELL_3G] = 'Cell 3G connection';
+    states[Connection.CELL_4G] = 'Cell 4G connection';
+    states[Connection.CELL] = 'Cell generic connection';
+    states[Connection.NONE] = 'No network connection';
+
+    alert('Connection type: ' + states[networkState]);
+}
+
+//checkConnection();
+
+
+    </script>
+</head>
+<body>
+    <button onclick="checkbattery()">battery</button>
+    <button onclick="checkConnection()">network</button>
+</body>
+</html>

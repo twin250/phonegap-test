@@ -1,0 +1,27 @@
+{
+  "changedFilesIos": [
+    "login.html",
+    "js\\mainJS.js",
+    "index.html",
+    "js\\index.js",
+    "js\\Coreutils.js",
+    "js\\fetchData.js",
+    "searchExcel.html",
+    "js\\searchData.js",
+    "assets\\css\\custom.css"
+  ],
+  "deletedFilesIos": [
+    "js\\readExcel.js"
+  ],
+  "addedPluginsIos": [],
+  "deletedPluginsIos": [],
+  "changedFiles": [
+    "assets\\css\\custom.css",
+    "searchExcel.html",
+    "js\\searchData.js",
+    "js\\fetchData.js"
+  ],
+  "deletedFiles": [],
+  "addedPlugins": [],
+  "deletedPlugins": []
+}
